@@ -60,22 +60,22 @@ func passValue(person entities.Values, loop int) {
 }
 
 func passingValuesLarge() {
-	quijote := entities.ShakespeareBook
+	shakespeare := entities.ShakespeareBook
 
-	passValueLarge(quijote, 0)
+	passValueLarge(shakespeare, 0)
 }
 
-func passValueLarge(quijote entities.Book, loop int) {
+func passValueLarge(shakespeare entities.Book, loop int) {
 	if loop > 10 {
 		return
 	}
 
-	passValueLarge(quijote, loop+1)
+	passValueLarge(shakespeare, loop+1)
 }
 
-type structValueReciever struct{}
+type structReciever struct{}
 
-func (r structValueReciever) runValueReceiver(s something) {
+func (r structReciever) runValueReceiver(s something) {
 	for i := 0; i < (len(s.Nombre)+s.Edad)*100; i++ {
 		cuadrado := i * i
 		sqrt := math.Sqrt(float64(cuadrado))

@@ -72,9 +72,7 @@ func passPointersLarge(quijote *entities.Book, loop int) {
 	passPointersLarge(quijote, loop+1)
 }
 
-type structPointerReciever struct{}
-
-func (r *structPointerReciever) runPointerReceiver(s something) {
+func (r *structReciever) runPointerReceiver(s something) {
 	for i := 0; i < (len(s.Nombre)+s.Edad)*100; i++ {
 		cuadrado := i * i
 		sqrt := math.Sqrt(float64(cuadrado))
