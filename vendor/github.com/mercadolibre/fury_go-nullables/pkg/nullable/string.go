@@ -1,5 +1,7 @@
 package nullable
 
+import "encoding/json"
+
 type String struct {
 	Value    string
 	HasValue bool
