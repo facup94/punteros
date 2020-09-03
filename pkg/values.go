@@ -60,7 +60,7 @@ func passValue(person entities.Values, loop int) {
 }
 
 func passingValuesLarge() {
-	quijote := entities.QuijoteBook
+	quijote := entities.ShakespeareBook
 
 	passValueLarge(quijote, 0)
 }

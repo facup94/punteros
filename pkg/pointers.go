@@ -59,7 +59,7 @@ func passPointer(person *entities.Values, loop int) {
 }
 
 func passingPointersLarge() {
-	quijote := entities.QuijoteBook
+	quijote := entities.ShakespeareBook
 
 	passPointersLarge(&quijote, 0)
 }
