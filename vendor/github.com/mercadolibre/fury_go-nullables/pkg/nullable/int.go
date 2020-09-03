@@ -1,5 +1,7 @@
 package nullable
 
+import "encoding/json"
+
 type Int struct {
 	Value    int64
 	HasValue bool

@@ -1,5 +1,7 @@
 package nullable
 
+import "encoding/json"
+
 import (
 	"time"
 )
