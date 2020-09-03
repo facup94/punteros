@@ -20,7 +20,11 @@ func NilFloat() Float {
 }
 
 func (f Float) MarshalJSON() ([]byte, error) {
-	return marshall(f.HasValue, f.Value)
+	if !f.HasValue {
+		return json.Marshal(nil)
+	}
+
+	return json.Marshal(f.Value)
 }
 
 func (f *Float) UnmarshalJSON(data []byte) (err error) {

@@ -20,7 +20,11 @@ func NilString() String {
 }
 
 func (s String) MarshalJSON() ([]byte, error) {
-	return marshall(s.HasValue, s.Value)
+	if !s.HasValue {
+		return json.Marshal(nil)
+	}
+
+	return json.Marshal(s.Value)
 }
 
 func (s *String) UnmarshalJSON(data []byte) (err error) {
