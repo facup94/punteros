@@ -24,7 +24,11 @@ func NilTime() Time {
 }
 
 func (t Time) MarshalJSON() ([]byte, error) {
-	return marshall(t.HasValue, t.Value)
+	if !t.HasValue {
+		return json.Marshal(nil)
+	}
+
+	return json.Marshal(t.Value)
 }
 
 func (t *Time) UnmarshalJSON(data []byte) (err error) {

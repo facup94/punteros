@@ -84,14 +84,6 @@ func getFieldJSON(field reflect.StructField, value interface{}) (fieldJSON strin
 	return
 }
 
-func marshall(hasValue bool, value interface{}) ([]byte, error) {
-	if !hasValue {
-		return json.Marshal(nil)
-	}
-
-	return json.Marshal(value)
-}
-
 func unmarshal(data []byte, hasValue *bool, value interface{}) (err error) {
 	var v interface{}
 
