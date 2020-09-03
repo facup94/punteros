@@ -1,0 +1,9 @@
+# github.com/google/go-cmp v0.5.2
+github.com/google/go-cmp/cmp
+github.com/google/go-cmp/cmp/internal/diff
+github.com/google/go-cmp/cmp/internal/flags
+github.com/google/go-cmp/cmp/internal/function
+github.com/google/go-cmp/cmp/internal/value
+# github.com/mercadolibre/fury_go-nullables v0.0.0-20200826174656-aaece512be9f
+## explicit
+github.com/mercadolibre/fury_go-nullables/pkg/nullable
